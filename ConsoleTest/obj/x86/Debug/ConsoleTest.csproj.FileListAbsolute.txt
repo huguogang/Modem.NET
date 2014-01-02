@@ -1,0 +1,21 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ConsoleTest\bin\Debug\ConsoleTest.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ConsoleTest\bin\Debug\ConsoleTest.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ConsoleTest\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ConsoleTest\obj\x86\Debug\ConsoleTest.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ConsoleTest\obj\x86\Debug\ConsoleTest.pdb
+C:\Users\Guogang Hu\Documents\Work\Modem\ConsoleTest\bin\Debug\ConsoleTest.exe
+C:\Users\Guogang Hu\Documents\Work\Modem\ConsoleTest\bin\Debug\ConsoleTest.pdb
+C:\Users\Guogang Hu\Documents\Work\Modem\ConsoleTest\bin\Debug\Lib.dll
+C:\Users\Guogang Hu\Documents\Work\Modem\ConsoleTest\bin\Debug\Lib.pdb
+C:\Users\Guogang Hu\Documents\Work\Modem\ConsoleTest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guogang Hu\Documents\Work\Modem\ConsoleTest\obj\x86\Debug\ConsoleTest.exe
+C:\Users\Guogang Hu\Documents\Work\Modem\ConsoleTest\obj\x86\Debug\ConsoleTest.pdb
+C:\Users\Guogang Hu\Documents\Work\Modem\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ConsoleTest\bin\Debug\ConsoleTest.exe
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ConsoleTest\bin\Debug\ConsoleTest.pdb
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ConsoleTest\bin\Debug\Lib.dll
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ConsoleTest\bin\Debug\Lib.pdb
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ConsoleTest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ConsoleTest\obj\x86\Debug\ConsoleTest.exe
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ConsoleTest\obj\x86\Debug\ConsoleTest.pdb

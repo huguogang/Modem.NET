@@ -1,0 +1,31 @@
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ModemService\bin\Debug\ModemService.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ModemService\bin\Debug\ModemService.pdb
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ModemService\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ModemService\obj\x86\Debug\ModemService.exe
+c:\documents and settings\administrator\my documents\visual studio 2010\Projects\Modem\ModemService\obj\x86\Debug\ModemService.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Modem\ModemService\bin\Debug\Lib.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\Modem\ModemService\bin\Debug\Lib.pdb
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\bin\Debug\ModemService.exe
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\bin\Debug\ModemService.pdb
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\bin\Debug\Lib.dll
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\bin\Debug\Lib.pdb
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\obj\x86\Debug\ModemService.exe
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\obj\x86\Debug\ModemService.pdb
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\obj\x86\Debug\ModemService.ModemControllerService.resources
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\obj\x86\Debug\ModemService.ProjectInstaller.resources
+C:\Users\Guogang Hu\Documents\Work\Modem\ModemService\bin\Debug\ModemService.exe.config
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\bin\Debug\ModemService.exe.config
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\bin\Debug\ModemService.exe
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\bin\Debug\ModemService.pdb
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\bin\Debug\Lib.dll
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\bin\Debug\Lib.pdb
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\obj\x86\Debug\ModemService.ModemControllerService.resources
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\obj\x86\Debug\ModemService.ProjectInstaller.resources
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\obj\x86\Debug\ModemService.exe
+C:\Users\Guogang Hu\Documents\GitHub\Modem.NET\ModemService\obj\x86\Debug\ModemService.pdb
