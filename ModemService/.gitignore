@@ -1,0 +1,32 @@
+#OS files
+[Tt]humbs.db
+*.DS_Store
+
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.pcf
+*ncb
+*.suo
+*.tbl
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+[Bb]uild/
+
+#Subversion, ...
+.svn
+.cvs
+
+#Office temp files
+~$*
