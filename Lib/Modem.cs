@@ -95,6 +95,9 @@ namespace Lib
         protected ATResponseCode ExecuteATCommand(string cmd, int timeout_s = 1)
         {
             DateTime start = DateTime.Now;
+            //do not want previous residual reponse being considered status code of this class
+            serialPort.DiscardInBuffer();
+
             //does not work, seems to be writing too fast
             //serialPort.WriteLine(cmd);
             string outS = cmd + "\r";
@@ -107,15 +110,18 @@ namespace Lib
             }
             
             String response;
-            ATResponseCode rCode;
+            ATResponseCode rCode = ATResponseCode.AT_NOTHING;
             while((rCode = ParseResponse(response = ReadLine(timeout_s))) == ATResponseCode.AT_OTHER)
             {
-                Console.WriteLine(response);
+                Console.WriteLine("response code: {0}, string: {1}", rCode, response);
                 if ((DateTime.Now - start).TotalSeconds > timeout_s)
                 {
+                    //timeout, return whatever code we've got so far
                     return rCode;
                 }
             }
+            //got some response from Modem
+            Console.WriteLine("response code: {0}, string: {1}", rCode, response);
             return rCode;
         }
         /// <summary>
@@ -127,7 +133,6 @@ namespace Lib
         {
             DateTime start = DateTime.Now;
             string ret = "";
-            Console.WriteLine(timeout_s);
             while (serialPort.BytesToRead > 0 || (DateTime.Now - start).TotalSeconds < timeout_s)
             {
                 if (serialPort.BytesToRead > 0)

@@ -28,12 +28,29 @@ namespace Lib
         public static int DataBits = 8;
         public static StopBits StopBits = StopBits.One;
         public static Parity Parity = Parity.None;
-
+        /// <summary>
+        /// number to connect
+        /// </summary>
         public static string DialNumber
         {
             get
             {
-                return GetConfigValue("DialNumber");
+                string val = GetConfigValue("DialNumber");
+                if (val.EndsWith(";"))
+                {
+                    return val;
+                }
+                return val + ";"; //resume command mode after dialing
+            }
+        }
+        /// <summary>
+        /// data to be entered after connected
+        /// </summary>
+        public static string DialData
+        {
+            get
+            {
+                return GetConfigValue("DialData");
             }
         }
 
@@ -58,6 +75,31 @@ namespace Lib
                 return GetIntConfig("RetryInterval_min", 15);
             }
         }
+
+        public static TimeSpan Schedule1_StartTime
+        {
+            get
+            {
+                return GetTimeSpanConfig("Schedule1_StartTime", new TimeSpan(10, 0, 0));
+            }
+        }
+
+        public static TimeSpan Schedule2_StartTime
+        {
+            get
+            {
+                return GetTimeSpanConfig("Schedule2_StartTime", new TimeSpan(14, 0, 0));
+            }
+        }
+
+        public static int RandomDelay_s
+        {
+            get
+            {
+                return GetIntConfig("RandomDelay_s", 120);
+            }
+        }
+
         public static int MaxRetry
         {
             get

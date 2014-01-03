@@ -41,6 +41,7 @@ namespace Lib
             this.RetryInterval = retryInterval;
  
             NextRunTime = GetNextRun();
+            Console.WriteLine("Scheduled next task @{0}", NextRunTime);
         }
         /// <summary>
         /// calculate next runtime based on current time, schedule, plus a random delay
@@ -49,7 +50,12 @@ namespace Lib
         /// <returns></returns>
         private DateTime GetNextRun()
         {
-            
+            //backdoor for testing
+            if (StartTime == new TimeSpan(0))
+            {
+                return DateTime.Now;
+            }
+
             DateTime now = DateTime.Now;
             int randSec = rnd.Next(RandomDelaySec);
             if (now.TimeOfDay.TotalSeconds >= StartTime.TotalSeconds)
@@ -80,15 +86,20 @@ namespace Lib
             if(!success)
             {
                 RetryCount++;
+                
                 if (RetryCount <= MaxRetry)
                 {
-                    NextRunTime = NextRunTime.Add(RetryInterval);
+                    //schedule retry
+                    NextRunTime = DateTime.Now.Add(RetryInterval);
+                    Console.WriteLine("Task failed. Scheduled retry #{0}@{1}", RetryCount, NextRunTime);
                     return;    
                 }
+                Console.WriteLine("Exceeds max retry, task failed");
             }
             //done, start the next scheduled task
             RetryCount = 0;
             GetNextRun();
+            Console.WriteLine("Scheduled next task @{0}", NextRunTime);
         }
     }
 }
