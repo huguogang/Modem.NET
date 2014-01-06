@@ -13,3 +13,5 @@ Requirements
 To un/install service
 installutil.exe MyNewService.exe
 installutil.exe /u MyNewService.exe
+
+Computer should not be allowed to sleep or hibernate

@@ -5,45 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-using Lib;
-namespace ConsoleTest
+namespace Lib
 {
-    class Program
+    /// <summary>
+    /// with a interface similar to the ServiceBase. This class can be
+    /// shread between console app and windows services for easy debugging
+    /// </summary>
+    public class Driver
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("1000");
-            //Test1();
-            Test2();
-        }
-        /// <summary>
-        /// simple test of dialing functionality
-        /// </summary>
-        static void Test1() 
-        {
-            try
-            {
-                SerialPort port = new SerialPort(Config.PortName, Config.BaudRate,
-                    Config.Parity, Config.DataBits, Config.StopBits);
-                port.Open();
-                Modem m = new Modem(port);
-                ATResponseCode code = m.Dial(Config.DialNumber);
-                if (code == ATResponseCode.AT_OK)
-                {
-                    code = m.Dial(Config.DialData);
-                }
-                port.Close();
-                Console.WriteLine("response: {0}", code);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-        }
-        /// <summary>
-        /// full program with diagnostics output
-        /// </summary>
-        static void Test2()
+        protected SerialPort port = null;
+        public void OnStart(string[] args)
         {
             try
             {
@@ -52,7 +23,7 @@ namespace ConsoleTest
                 Schedule s2 = new Schedule(Config.Schedule2_StartTime, Config.RandomDelay_s,
                   new TimeSpan(0, Config.RetryInterval_min, 0), Config.MaxRetry, 2);
 
-                SerialPort port = new SerialPort(Config.PortName, Config.BaudRate,
+                port = new SerialPort(Config.PortName, Config.BaudRate,
                     Config.Parity, Config.DataBits, Config.StopBits);
                 port.Open();
                 Modem m = new Modem(port);
@@ -63,7 +34,7 @@ namespace ConsoleTest
                     if (s1.CheckSchedule())
                     {
                         code = m.Dial(Config.DialNumber);
-                        logMsg = string.Format("Dialing response: {0}", code); 
+                        logMsg = string.Format("Dialing response: {0}", code);
                         MessageLog.LogMessage(logMsg, MessageLog.LogEntryType.Information);
                         if (code != ATResponseCode.AT_OK)
                         {
@@ -97,18 +68,25 @@ namespace ConsoleTest
                         }
                     }
                     else
-                    { 
+                    {
                         //idle, yield
                         Thread.Sleep(30000);
                     }
                 }
-                //never here
-                port.Close();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
                 MessageLog.LogException(e);
+                //TODO: certail exceptions should have a recovery strategy
+            }
+        }
+
+        public void OnStop()
+        {
+            if (port != null && port.IsOpen)
+            {
+                port.Close();
             }
         }
     }

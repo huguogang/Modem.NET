@@ -32,9 +32,12 @@ namespace Lib
 
         private Random rnd;
 
-        public Schedule(TimeSpan startTime, int randomDelaySec, TimeSpan retryInterval, int maxRetry)
+        public Schedule(TimeSpan startTime, int randomDelaySec, TimeSpan retryInterval, 
+            int maxRetry, int rndSeed)
         {
-            rnd = new Random((int)(DateTime.Now.TimeOfDay.TotalSeconds));
+            //schedules are created in almost the same second
+            //rnd = new Random((int)(DateTime.Now.TimeOfDay.TotalSeconds));
+            rnd = new Random(rndSeed);
             this.StartTime = startTime;
             this.RandomDelaySec = randomDelaySec;
             this.MaxRetry = maxRetry;
@@ -55,7 +58,7 @@ namespace Lib
             {
                 return DateTime.Now;
             }
-
+            
             DateTime now = DateTime.Now;
             int randSec = rnd.Next(RandomDelaySec);
             if (now.TimeOfDay.TotalSeconds >= StartTime.TotalSeconds)
@@ -98,7 +101,7 @@ namespace Lib
             }
             //done, start the next scheduled task
             RetryCount = 0;
-            GetNextRun();
+            NextRunTime = GetNextRun();
             Console.WriteLine("Scheduled next task @{0}", NextRunTime);
         }
     }
